@@ -36,7 +36,7 @@ function App() {
                 `Form ${formId} submitted, response id: ${responseId}`
               );
               const response = await fetch(
-                `https://85ff8eba.jellycat-bigcommerce-api-proxies-946.pages.dev/v1/getformbyid/${formId}/${responseId}/`
+                `https://9f8c7f79.jellycat-bigcommerce-api-proxies-946.pages.dev/v1/getformbyid/${formId}/${responseId}/`
               );
               console.log("🙌🏻 ~ response:", response);
               const data = await response.json();
