@@ -4,7 +4,7 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [page, setPage] = useState(3);
+  const [page, setPage] = useState(1);
 
   return (
     <>
@@ -41,7 +41,7 @@ function App() {
               console.log("🙌🏻 ~ response:", response);
               const data = await response.json();
               const answers = data?.items?.shift()?.answers;
-              console.log("🙌🏻 ~ answers:", answers)
+              console.log("🙌🏻 ~ answers:", answers);
               setPage(3);
             }}
           />
@@ -52,6 +52,9 @@ function App() {
           <h2>Thank you</h2>
           <ResponsiveRadar
             animate
+            // @ts-ignore-next-line
+            width={900}
+            height={500}
             curve="catmullRomClosed"
             data={[
               {
