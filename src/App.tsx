@@ -4,7 +4,7 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(3);
 
   return (
     <>
@@ -28,7 +28,7 @@ function App() {
       {page === 2 && (
         <div>
           <Widget
-            id={"itVN19zc"}
+            id={"TauDsgoD"}
             style={{ width: "80vw", height: "40vw" }}
             className="my-form"
             onSubmit={async ({ formId, responseId }) => {
@@ -36,7 +36,7 @@ function App() {
                 `Form ${formId} submitted, response id: ${responseId}`
               );
               const response = await fetch(
-                `https://f6a08b43.jellycat-bigcommerce-api-proxies-946.pages.dev/v1/getformbyid/${formId}/${responseId}/`
+                `https://31773aa0.jellycat-bigcommerce-api-proxies-946.pages.dev/v1/getformbyid/${formId}/${responseId}/`
               );
               console.log("🙌🏻 ~ response:", response);
               const data = await response.json();
@@ -49,7 +49,7 @@ function App() {
       )}
       {page === 3 && (
         <div>
-          <h2>Thank you</h2>{" "}
+          <h2>Thank you</h2>
           <ResponsiveRadar
             animate
             curve="catmullRomClosed"
